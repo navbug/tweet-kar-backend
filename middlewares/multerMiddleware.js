@@ -14,6 +14,9 @@ const storage = multer.diskStorage({
 
 // Check file type
 function checkFileType(file, cb) {
+  /* The line `const filetypes = /jpeg|jpg|png/;` is creating a regular expression pattern that matches
+  file extensions for JPEG, JPG, and PNG image files. This pattern is used later in the code to
+  check if the uploaded file has one of these allowed image file extensions. */
   const filetypes = /jpeg|jpg|png/;
   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = filetypes.test(file.mimetype);

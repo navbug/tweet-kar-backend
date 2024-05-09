@@ -4,8 +4,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const { PORT, MONGODB_URL } = require("./config");
 
-const port = PORT;
-const mongoURI = MONGODB_URL;
+const port = process.env.PORT;
+const mongoURI = process.env.MONGODB_URL;
 
 mongoose.connect(mongoURI);
 
