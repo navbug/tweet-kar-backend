@@ -167,7 +167,7 @@ router.post(
       } else {
         // Update profilePic field in user document
         const imagePath =
-          "http://localhost:5000" + "/files/" + req.file.filename;
+          "https://tweet-kar-backend.onrender.com" + "/files/" + req.file.filename;
         const user = await User.findByIdAndUpdate(
           userId,
           { profilePicture: imagePath },

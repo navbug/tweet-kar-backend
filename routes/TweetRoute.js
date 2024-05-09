@@ -26,7 +26,7 @@ router.post(
 
       // If image is uploaded, get the image path
       if (req.file) {
-        imagePath = "http://localhost:5000" + "/files/" + req.file.filename;
+        imagePath = "https://tweet-kar-backend.onrender.com" + "/files/" + req.file.filename;
       }
 
       // Create the tweet
